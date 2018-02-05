@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CSCI</key>
+	<array>
+		<string>Computer Animation</string>
+		<string>Into to CyberSecurity</string>
+		<string>Database Systems</string>
+		<string>Data Mining</string>
+		<string>Big Data</string>
+	</array>
+	<key>ATLS</key>
+	<array>
+		<string>Mobile App Dev</string>
+		<string>Frontend Dev</string>
+		<string>Game Design</string>
+		<string>Big Data Architecture</string>
+		<string>Flow Visualization</string>
+	</array>
+</dict>
+</plist>

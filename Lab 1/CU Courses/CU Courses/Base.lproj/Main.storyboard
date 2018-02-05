@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Courses-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="CU_Courses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMF-Du-nuU">
+                                <rect key="frame" x="16" y="61" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="bee-DO-wQz"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="DAs-qY-0Q8"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-DC-Pa8">
+                                <rect key="frame" x="127" y="30" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-Xf-YYJ">
+                                <rect key="frame" x="16" y="297" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0gK-Qm-2eQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B1e-DC-Pa8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="81s-Ll-mO0"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="RMF-Du-nuU" secondAttribute="trailing" constant="16" id="C9M-6o-fOz"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="RMF-Du-nuU" secondAttribute="trailing" constant="16" id="IZ9-l0-PZy"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Afc-Xf-YYJ" secondAttribute="trailing" constant="16" id="Kbe-OW-sde"/>
+                            <constraint firstItem="RMF-Du-nuU" firstAttribute="top" secondItem="B1e-DC-Pa8" secondAttribute="bottom" constant="10" id="M9f-t2-kO0"/>
+                            <constraint firstItem="Afc-Xf-YYJ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="SG4-eS-oIB"/>
+                            <constraint firstItem="RMF-Du-nuU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="YHh-Or-V3E"/>
+                            <constraint firstItem="B1e-DC-Pa8" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="dLk-m0-Kl0"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Afc-Xf-YYJ" secondAttribute="trailing" constant="16" id="gkf-Z8-PId"/>
+                            <constraint firstItem="Afc-Xf-YYJ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="jjK-ET-M0C"/>
+                            <constraint firstItem="RMF-Du-nuU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="ovM-gT-gv1"/>
+                            <constraint firstItem="Afc-Xf-YYJ" firstAttribute="top" secondItem="RMF-Du-nuU" secondAttribute="bottom" constant="20" id="xLC-NC-MJW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Courses" image="books-32" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="coursesPicker" destination="RMF-Du-nuU" id="InB-K2-qBM"/>
+                        <outlet property="selectedCourseLabel" destination="Afc-Xf-YYJ" id="DeT-K4-c1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Canvas-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="CU_Courses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQh-Wc-P8t">
+                                <rect key="frame" x="10" y="304" width="355" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.12671060919999999" blue="0.1345985328" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Go To Canvas">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToCanvas:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="EjM-Ue-b0K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WQh-Wc-P8t" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="YYR-S3-Tzs"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="WQh-Wc-P8t" secondAttribute="trailing" constant="10" id="ar6-MP-7t6"/>
+                            <constraint firstItem="WQh-Wc-P8t" firstAttribute="centerY" secondItem="O1u-W8-tvY" secondAttribute="centerY" id="gQI-Nb-m75"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Canvas" image="Canvas-Logo-Black-32" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="DYu-IX-6eO">
+            <objects>
+                <viewController title="Third" id="zFM-Wa-hE8" customClass="ThirdViewController" customModule="CU_Courses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wh8-63-vnc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KKt-rS-OSe">
+                                <rect key="frame" x="16" y="204" width="343" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="bUU-Mn-c4D"/>
+                                    <constraint firstAttribute="width" constant="343" id="lww-8s-X7P"/>
+                                    <constraint firstAttribute="height" constant="5" id="x4r-IF-gPZ"/>
+                                </constraints>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-gD-gcq">
+                                <rect key="frame" x="48.5" y="308" width="278" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvH-hR-pwm">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="BAh-PX-UMc"/>
+                                            <constraint firstAttribute="height" constant="32" id="Rk8-Uv-r8z"/>
+                                        </constraints>
+                                        <state key="normal" image="record-48"/>
+                                        <connections>
+                                            <action selector="recordBtnClicked:" destination="zFM-Wa-hE8" eventType="touchUpInside" id="PfU-Bq-Qyg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-gu-Dze">
+                                        <rect key="frame" x="82" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="stop"/>
+                                        <connections>
+                                            <action selector="stopBtnClicked:" destination="zFM-Wa-hE8" eventType="touchUpInside" id="WIl-6o-PoV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnS-jX-Lnw">
+                                        <rect key="frame" x="164" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="playBtnClicked:" destination="zFM-Wa-hE8" eventType="touchUpInside" id="oRp-Yg-3kF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trO-97-64F">
+                                        <rect key="frame" x="246" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="pauseBtnClicked:" destination="zFM-Wa-hE8" eventType="touchUpInside" id="HcI-ZY-tuL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOU-CL-hq4">
+                                <rect key="frame" x="164.5" y="234" width="46" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRu-r9-Fbp">
+                                <rect key="frame" x="141" y="77" width="93.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e6R-gD-gcq" firstAttribute="top" secondItem="KKt-rS-OSe" secondAttribute="bottom" constant="99" id="0vt-Z5-W69"/>
+                            <constraint firstItem="KKt-rS-OSe" firstAttribute="top" secondItem="uzN-10-bUR" secondAttribute="top" constant="184" id="RRL-uY-chS"/>
+                            <constraint firstItem="MRu-r9-Fbp" firstAttribute="centerX" secondItem="uzN-10-bUR" secondAttribute="centerX" id="fo5-JV-rG9"/>
+                            <constraint firstItem="MRu-r9-Fbp" firstAttribute="top" secondItem="uzN-10-bUR" secondAttribute="top" constant="57" id="i5v-ct-Y3J"/>
+                            <constraint firstItem="uzN-10-bUR" firstAttribute="trailing" secondItem="KKt-rS-OSe" secondAttribute="trailing" constant="16" id="nxz-tJ-aXw"/>
+                            <constraint firstItem="MOU-CL-hq4" firstAttribute="top" secondItem="KKt-rS-OSe" secondAttribute="bottom" constant="25" id="oHQ-Nv-UBL"/>
+                            <constraint firstItem="KKt-rS-OSe" firstAttribute="leading" secondItem="uzN-10-bUR" secondAttribute="leading" constant="16" id="vQ3-ta-PBB"/>
+                            <constraint firstItem="MOU-CL-hq4" firstAttribute="centerX" secondItem="KKt-rS-OSe" secondAttribute="centerX" id="x8a-1I-4Jw"/>
+                            <constraint firstItem="e6R-gD-gcq" firstAttribute="centerX" secondItem="Wh8-63-vnc" secondAttribute="centerX" id="yTL-Re-uh6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzN-10-bUR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notes" image="mic-32" id="Efr-R2-hNR" userLabel="Third"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="MOU-CL-hq4" id="ifH-g1-oG8"/>
+                        <outlet property="pauseBtn" destination="trO-97-64F" id="vm8-vn-zB5"/>
+                        <outlet property="playBtn" destination="tnS-jX-Lnw" id="U06-ci-tgW"/>
+                        <outlet property="progressBar" destination="KKt-rS-OSe" id="05P-qO-4jE"/>
+                        <outlet property="recordBtn" destination="wvH-hR-pwm" id="DFI-JR-Hsm"/>
+                        <outlet property="stopBtn" destination="aqa-gu-Dze" id="5dV-ah-5Y5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pip-Ia-ZRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="757.87106446776613"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="zFM-Wa-hE8" kind="relationship" relationship="viewControllers" id="grs-dV-5C7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Canvas-Logo-Black-32" width="32" height="32"/>
+        <image name="books-32" width="32" height="32"/>
+        <image name="mic-32" width="32" height="32"/>
+        <image name="pause" width="50" height="50"/>
+        <image name="play" width="50" height="50"/>
+        <image name="record-48" width="48" height="48"/>
+        <image name="stop" width="50" height="50"/>
+    </resources>
+</document>

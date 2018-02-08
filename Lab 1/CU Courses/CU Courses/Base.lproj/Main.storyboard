@@ -32,29 +32,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-Xf-YYJ">
-                                <rect key="frame" x="16" y="297" width="343" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="0gK-Qm-2eQ"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="297" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncf-sj-EFv">
+                                <rect key="frame" x="16" y="556" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Course URL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="courseUrlBtnClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YG6-JO-d5S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Ncf-sj-EFv" secondAttribute="bottom" constant="32" id="56E-Ap-ldY"/>
                             <constraint firstItem="B1e-DC-Pa8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="81s-Ll-mO0"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="RMF-Du-nuU" secondAttribute="trailing" constant="16" id="C9M-6o-fOz"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="RMF-Du-nuU" secondAttribute="trailing" constant="16" id="IZ9-l0-PZy"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Afc-Xf-YYJ" secondAttribute="trailing" constant="16" id="Kbe-OW-sde"/>
                             <constraint firstItem="RMF-Du-nuU" firstAttribute="top" secondItem="B1e-DC-Pa8" secondAttribute="bottom" constant="10" id="M9f-t2-kO0"/>
                             <constraint firstItem="Afc-Xf-YYJ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="SG4-eS-oIB"/>
+                            <constraint firstItem="Ncf-sj-EFv" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="WIs-Ko-OwH"/>
                             <constraint firstItem="RMF-Du-nuU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="YHh-Or-V3E"/>
                             <constraint firstItem="B1e-DC-Pa8" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="dLk-m0-Kl0"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Afc-Xf-YYJ" secondAttribute="trailing" constant="16" id="gkf-Z8-PId"/>
                             <constraint firstItem="Afc-Xf-YYJ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="jjK-ET-M0C"/>
                             <constraint firstItem="RMF-Du-nuU" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="ovM-gT-gv1"/>
                             <constraint firstItem="Afc-Xf-YYJ" firstAttribute="top" secondItem="RMF-Du-nuU" secondAttribute="bottom" constant="20" id="xLC-NC-MJW"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Ncf-sj-EFv" secondAttribute="trailing" constant="16" id="zXS-tm-YJ9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>

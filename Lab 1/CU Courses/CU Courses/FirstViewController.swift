@@ -22,6 +22,8 @@ class FirstViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     var departmentCourses = [String: [String]]()
     var departments = [String]()
     var courses = [String]()
+    var courseUrl : String = "CSCI%205809"
+    var courseTitle : String = ""
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
@@ -48,7 +50,13 @@ class FirstViewController: UIViewController,UIPickerViewDataSource, UIPickerView
         }
         else
         {
-            return courses[row]
+            //print("Before: ",courses[row])
+            
+            let course = courses[row].split(separator: ";")
+            let courseTitleTemp = String(course[0])
+
+            return courseTitleTemp
+            
         }
     }
 
@@ -65,8 +73,17 @@ class FirstViewController: UIViewController,UIPickerViewDataSource, UIPickerView
         }
             let selectedDepartment = pickerView.selectedRow(inComponent: departmentComponent)
             let selectedCourse = pickerView.selectedRow(inComponent: coursesComponent)
-            
-            selectedCourseLabel.text = "You've selected \(courses[selectedCourse]) from \(departments[selectedDepartment]) department"
+        
+            let course = courses[selectedCourse].split(separator: ";")
+        
+            courseTitle = String(course[0])
+            courseUrl = String(course[1])
+            print("courseTitle", courseTitle)
+            print("courseUrl", courseUrl)
+
+            selectedCourseLabel.text = "You've selected \(courseTitle) from \(departments[selectedDepartment]) department"
+        
+        
         
     }
     override func viewDidLoad()
@@ -84,6 +101,7 @@ class FirstViewController: UIViewController,UIPickerViewDataSource, UIPickerView
                 departmentCourses = try plistdecoder.decode([String: [String]].self, from: data)
                 departments = Array(departmentCourses.keys)
                 courses = departmentCourses[departments[0]]! as [String]
+                //print(courses)
             }
             catch
             {
@@ -93,6 +111,14 @@ class FirstViewController: UIViewController,UIPickerViewDataSource, UIPickerView
         }
     }
 
+    @IBAction func courseUrlBtnClicked(_ sender: UIButton)
+    {
+        print("accessing https://catalog.colorado.edu/search/?P=" + courseUrl)
+        if let url = URL(string: "https://catalog.colorado.edu/search/?P=" + courseUrl)
+        {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

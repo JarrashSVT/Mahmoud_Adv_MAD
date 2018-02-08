@@ -4,19 +4,19 @@
 <dict>
 	<key>CSCI</key>
 	<array>
-		<string>Computer Animation</string>
-		<string>Into to CyberSecurity</string>
-		<string>Database Systems</string>
-		<string>Data Mining</string>
-		<string>Big Data</string>
+		<string>Computer Animation;CSCI%205809</string>
+		<string>Computer Graphics;CSCI%205229</string>
+		<string>Database Systems;CSCI%205817</string>
+		<string>Data Mining;CSCI%205502</string>
+		<string>Fundamentals of Programming Languages;CSCI%205535</string>
 	</array>
 	<key>ATLS</key>
 	<array>
-		<string>Mobile App Dev</string>
-		<string>Frontend Dev</string>
-		<string>Game Design</string>
-		<string>Big Data Architecture</string>
-		<string>Flow Visualization</string>
+		<string>Mobile App Dev;ATLS%205320</string>
+		<string>Frontend Dev;ATLS%205630</string>
+		<string>Game Design;ATLS%205040</string>
+		<string>Big Data Architecture;ATLS%205214</string>
+		<string>Flow Visualization;ATLS%205151</string>
 	</array>
 </dict>
 </plist>

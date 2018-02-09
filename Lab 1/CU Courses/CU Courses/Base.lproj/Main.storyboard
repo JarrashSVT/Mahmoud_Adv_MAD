@@ -68,7 +68,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Courses" image="books-32" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="books" selectedImage="books" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="coursesPicker" destination="RMF-Du-nuU" id="InB-K2-qBM"/>
                         <outlet property="selectedCourseLabel" destination="Afc-Xf-YYJ" id="DeT-K4-c1L"/>
@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Canvas" image="Canvas-Logo-Black-32" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Canvas" image="Canvas-Logo-Black" selectedImage="Canvas-Logo-Black" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,7 +191,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzN-10-bUR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="mic-32" id="Efr-R2-hNR" userLabel="Third"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="mic" selectedImage="mic" id="Efr-R2-hNR" userLabel="Third"/>
                     <connections>
                         <outlet property="durationLabel" destination="MOU-CL-hq4" id="ifH-g1-oG8"/>
                         <outlet property="pauseBtn" destination="trO-97-64F" id="vm8-vn-zB5"/>
@@ -226,9 +226,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Canvas-Logo-Black-32" width="32" height="32"/>
-        <image name="books-32" width="32" height="32"/>
-        <image name="mic-32" width="32" height="32"/>
+        <image name="Canvas-Logo-Black" width="25" height="25"/>
+        <image name="books" width="25" height="25"/>
+        <image name="mic" width="25" height="25"/>
         <image name="pause" width="50" height="50"/>
         <image name="play" width="50" height="50"/>
         <image name="record-48" width="48" height="48"/>

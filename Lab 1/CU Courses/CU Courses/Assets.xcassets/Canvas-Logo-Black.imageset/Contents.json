@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Canvas-Logo-Black-32.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Canvas-Black-50.png",
       "scale" : "2x"
     },
     {

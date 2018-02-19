@@ -210,7 +210,7 @@ class VehiclesTableViewController: UITableViewController {
             print("commit editingStyle() -> inventory.getIndex(vehicle: vehicleToDelete) ", inventory.getIndex(vehicle: vehicleToDelete))
             print("commit editingStyle() -> indexPath.row ",indexPath.row)
             
-            cars.remove(at: vehicleToDeleteIndex)
+            //cars.remove(at: vehicleToDeleteIndex)
             fvehicles.remove(at: indexPath.row)
             vehicles.remove(at: vehicleToDeleteIndex)
             inventory.vehicleList.remove(at: vehicleToDeleteIndex)

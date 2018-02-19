@@ -13,7 +13,7 @@ class MainViewController: UITableViewController {
     var cars = [String]()
     var bodyStyles = ["Coupe", "SUV", "Convertible", "Sedan", "Wagon"]
     var inventory = VehiclesInventory()
-    let kfilename = "data04.plist"
+    let kfilename = "data16.plist"
     
     override func viewDidLoad()
     {
@@ -36,21 +36,7 @@ class MainViewController: UITableViewController {
             cars = getDataArrayFromPlist(plistName: "cars")
         }
         
-        //cars = getDataArrayFromPlist(plistName: "cars")
-        
-//        for car in cars
-//        {
-//            var carDetails = car.split(separator: ";")
-//            //print(carDetails[0])
-//
-//            bodyStyles.append(String(carDetails[0]))
-//            print(car)
-//        }
-//
-//        for bodyStyle in bodyStyles
-//        {
-//            print(bodyStyle)
-//        }
+
         
         // add Vehicle objects to the array
         for car in cars

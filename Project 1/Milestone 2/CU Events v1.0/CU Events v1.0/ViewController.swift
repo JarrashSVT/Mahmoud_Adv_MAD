@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var addEventBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
     
+    @IBOutlet weak var usernameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,6 +28,12 @@ class ViewController: UIViewController {
             loginBtn.isHidden = true
             addEventBtn.isHidden = false
             logoutBtn.isHidden = false
+            guard let username = Auth.auth().currentUser?.displayName, username != ""
+            else
+            {
+                return
+            }
+            usernameLabel.text = "Welcome, \(username)"
         }
         else
         {
@@ -34,6 +41,7 @@ class ViewController: UIViewController {
             loginBtn.isHidden = false
             addEventBtn.isHidden = true
             logoutBtn.isHidden = true
+            usernameLabel.text = ""
         }
         
     }

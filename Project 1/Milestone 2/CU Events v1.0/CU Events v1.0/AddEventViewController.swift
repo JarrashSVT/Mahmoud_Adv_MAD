@@ -26,6 +26,7 @@ class AddEventViewController: UIViewController {
         let parameter = ["title" : title,
                          "location" : location]
         
+        print("parameter", parameter)
         DatabaseService.shared.eventsReference.childByAutoId().setValue(parameter)
         //fromAddEventVCToEventTVCSegue
 

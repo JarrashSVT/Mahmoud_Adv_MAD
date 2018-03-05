@@ -16,5 +16,5 @@ struct Event: Decodable
     let address: String
     let startDate: String
     let endDate: String
-    
+    let image: String
 }

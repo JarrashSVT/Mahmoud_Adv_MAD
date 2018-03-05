@@ -16,8 +16,7 @@ class DatabaseService
     private init() {}
     
     let eventsReference = Database.database().reference().child("events")
-    
-    
+    let storageReference = Storage.storage().reference()
     // this function return empty array. required further troubleshooting 
     func getEvents() -> [Event]
     {

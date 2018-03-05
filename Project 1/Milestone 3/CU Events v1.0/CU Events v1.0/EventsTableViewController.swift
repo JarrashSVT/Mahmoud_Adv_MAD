@@ -61,9 +61,34 @@ class EventsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel!.text = events[indexPath.row].title
-        cell.detailTextLabel!.text = events[indexPath.row].campus
+        let event = events[indexPath.row]
+        cell.textLabel!.text = event.title
+        cell.detailTextLabel!.text = event.campus
         cell.imageView?.image = UIImage(named: "cu-logo-64")
+        
+        let eventImgUrl = event.image
+        let url = URL(string: eventImgUrl)
+        let session = URLSession.shared.dataTask(with: url!) { (date, response, error) in
+            
+            guard error == nil else
+            {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            // Download image successful
+            DispatchQueue.main.async {
+                cell.imageView?.image = UIImage(data: date!)
+            }
+            
+          
+            
+//            dispatch_async(dispatch_get_main_queue(), {
+//                
+//            })
+            
+        }
+        session.resume()
         return cell
     }
     

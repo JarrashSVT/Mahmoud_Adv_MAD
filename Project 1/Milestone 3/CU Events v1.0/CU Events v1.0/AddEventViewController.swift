@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var eventTitleTxt: UITextField!
     @IBOutlet weak var addressTxt: UITextField!
@@ -16,6 +16,7 @@ class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     @IBOutlet weak var endDateTxt: UITextField!
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var campusTxt: UITextField!
+    @IBOutlet weak var eventImg: UIImageView!
     
     let datePicker = UIDatePicker()
     let campusPicker = UIPickerView()
@@ -83,21 +84,53 @@ class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                 return
             }
         
-        let parameter = ["title" : title,
-                         "address" : address,
-                         "description": description,
-                         "campus": campus,
-                         "startDate": startDate,
-                         "endDate": endDate]
+        // generate random image name
+        let uploadedImageName = NSUUID().uuidString
         
-        print("parameter", parameter)
-        DatabaseService.shared.eventsReference.childByAutoId().setValue(parameter)
+        // uploading the image
+        let storegeRef = DatabaseService.shared.storageReference.child("\(uploadedImageName).png")
+        
+        // get the binary format of the selected image
+        if let imgToUpload = UIImagePNGRepresentation(eventImg.image!)
+        {
+            //upload the selected image to the firebase storage
+            storegeRef.putData(imgToUpload, metadata: nil) { (metadata, error) in
+                
+                guard error == nil else
+                {
+                    print(error!.localizedDescription)
+                    return
+                }
+                //image upload successfully
+                // get the uploaded image url
+                if let eventImgUrl = metadata?.downloadURL()?.absoluteString
+                {
+                    // construct the value dict
+                    let parameter = ["title" : title,
+                                     "address" : address,
+                                     "description": description,
+                                     "campus": campus,
+                                     "startDate": startDate,
+                                     "endDate": endDate,
+                                     "image": eventImgUrl]
+                    
+                    self.createEventInDatabase(values: parameter)
+                }
+
+            }
+        }
+
         //fromAddEventVCToEventTVCSegue
 
         self.performSegue(withIdentifier: "fromAddEventVCToEventTVCSegue", sender: nil)
 
     }
     
+    
+    private func createEventInDatabase(values: [String: Any])
+    {
+        DatabaseService.shared.eventsReference.childByAutoId().setValue(values)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +155,10 @@ class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         
         endDateTxt.inputView = datePicker
         endDateTxt.inputAccessoryView = toolBar
+        
+        // uploading image view setup
+        eventImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectEventImage)))
+        eventImg.isUserInteractionEnabled = true
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField)
@@ -164,14 +201,50 @@ class AddEventViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     {
         campusTxt.text = campuses[row]
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Image Picker Functions
+    
+    @objc func selectEventImage()
+    {
+        print("selecting an Event Image ...")
+        let imgPicker = UIImagePickerController()
+        
+        imgPicker.delegate = self
+        imgPicker.allowsEditing = true
+        present(imgPicker, animated: true, completion: nil)
     }
-    */
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("image picked")
+//        print(info)
+        
+        var selectedImgFromPicker: UIImage?
+        
+        if let editedImg = info["UIImagePickerControllerEditedImage"] as? UIImage
+        {
+            selectedImgFromPicker = editedImg
+            print("editedImg selected")
+        }
+        else if let originalImg = info["UIImagePickerControllerOriginalImage"] as? UIImage
+        {
+            selectedImgFromPicker = originalImg
+            print("originalImg selected")
+
+        }
+        
+        if let selectedImg = selectedImgFromPicker
+        {
+            eventImg.image = selectedImg
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("image picker cancelled by user")
+        
+        dismiss(animated: true, completion: nil)
+    }
+
 
 }

@@ -10,4 +10,5 @@ target 'CU Events v1.0' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
   pod 'CodableFirebase'
+  pod 'Firebase/Storage'
 end

@@ -333,13 +333,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jan-s1-STu">
-                                <rect key="frame" x="45" y="526" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-hJ-Gai">
                                 <rect key="frame" x="16" y="314" width="71" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -410,6 +403,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-lz-cp0">
+                                <rect key="frame" x="17" y="537" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cuboulder-600" translatesAutoresizingMaskIntoConstraints="NO" id="5jz-CU-nNo">
+                                <rect key="frame" x="139" y="471" width="220" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.24311259390000001" green="0.24315303560000001" blue="0.2431037724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -435,6 +439,7 @@
                         <outlet property="campusTxt" destination="xLN-ra-j0g" id="YWV-4i-gf9"/>
                         <outlet property="descriptionTxt" destination="UZk-RO-d5N" id="63r-XQ-jLT"/>
                         <outlet property="endDateTxt" destination="QfR-wT-YnQ" id="jU9-1w-XMK"/>
+                        <outlet property="eventImg" destination="5jz-CU-nNo" id="okj-bc-eQd"/>
                         <outlet property="eventTitleTxt" destination="9Qc-1V-paq" id="lr0-dg-xHf"/>
                         <outlet property="startDateTxt" destination="6BP-ZB-1OF" id="i2S-zW-eaI"/>
                         <segue destination="voe-Kt-Rld" kind="show" identifier="fromAddEventVCToEventTVCSegue" id="daM-hj-gHI"/>
@@ -448,7 +453,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3642" y="241"/>
+            <point key="canvasLocation" x="3640.8000000000002" y="240.62968515742131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nCr-IZ-Kxi">

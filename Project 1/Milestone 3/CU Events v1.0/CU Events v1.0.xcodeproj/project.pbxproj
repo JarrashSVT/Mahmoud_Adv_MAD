@@ -18,6 +18,7 @@
 		1E0D55A12040BFE200577436 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0D55A02040BFE200577436 /* SignInViewController.swift */; };
 		1E58C2D6204C5E9B00FBBC2B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E58C2D5204C5E9B00FBBC2B /* Event.swift */; };
 		1E58C2D8204C779600FBBC2B /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E58C2D7204C779600FBBC2B /* EventDetailsViewController.swift */; };
+		1E58C2DA204CBBFE00FBBC2B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E58C2D9204CBBFE00FBBC2B /* EventKit.framework */; };
 		1EEA169F2041300D00320967 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA169E2041300D00320967 /* SignUpViewController.swift */; };
 		1EEA16A12041304D00320967 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA16A02041304D00320967 /* AlertController.swift */; };
 		1EEA16A320414DBF00320967 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA16A220414DBF00320967 /* DatabaseService.swift */; };
@@ -38,6 +39,7 @@
 		1E0D55A02040BFE200577436 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1E58C2D5204C5E9B00FBBC2B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1E58C2D7204C779600FBBC2B /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		1E58C2D9204CBBFE00FBBC2B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		1EEA169E2041300D00320967 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1EEA16A02041304D00320967 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		1EEA16A220414DBF00320967 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E58C2DA204CBBFE00FBBC2B /* EventKit.framework in Frameworks */,
 				6521BBA00667F2834A571465 /* Pods_CU_Events_v1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +113,7 @@
 		DE2BDB87D93094060FEC96C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E58C2D9204CBBFE00FBBC2B /* EventKit.framework */,
 				8D3C40C54EC64E23BC8B81BA /* Pods_CU_Events_v1_0.framework */,
 			);
 			name = Frameworks;

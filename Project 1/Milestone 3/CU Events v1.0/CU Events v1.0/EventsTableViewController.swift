@@ -63,7 +63,7 @@ class EventsTableViewController: UITableViewController {
 
         cell.textLabel!.text = events[indexPath.row].title
         cell.detailTextLabel!.text = events[indexPath.row].campus
-
+        cell.imageView?.image = UIImage(named: "cu-logo-64")
         return cell
     }
     

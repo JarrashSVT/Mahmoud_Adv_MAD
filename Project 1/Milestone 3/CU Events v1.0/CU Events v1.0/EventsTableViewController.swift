@@ -80,13 +80,7 @@ class EventsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 cell.imageView?.image = UIImage(data: date!)
             }
-            
-          
-            
-//            dispatch_async(dispatch_get_main_queue(), {
-//                
-//            })
-            
+
         }
         session.resume()
         return cell

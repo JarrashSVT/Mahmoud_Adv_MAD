@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Coupe;Nissan;Z300;1999;red;7999.0;120000</string>
+	<string>Convertible;Ford;Mustang;2003;Orange;12500;50000</string>
+	<string>Coupe;Toyota;Supra;1994;Red;15000;33003</string>
+	<string>Coupe;TOYOTA;Supra;1994;Black;44000.0;12000</string>
+	<string>Coupe;Ford;Mustang;2014;Yellow;33000.0;15000</string>
+	<string>SUV;Buick;Enclave;2010;Silver;9500.0;177000</string>
+	<string>Convertible;BMW;M3;2003;White;25000;5000</string>
+</array>
+</plist>

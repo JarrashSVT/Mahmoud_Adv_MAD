@@ -207,7 +207,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="CU Events" id="aXR-AY-f3e">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="kOo-cD-bci">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="kOo-cD-bci">
                             <connections>
                                 <segue destination="xVG-nU-dUL" kind="unwind" identifier="fromEventsTVCtoHomeSegue" unwindAction="unwingSegue:" id="fNe-sl-uYq"/>
                             </connections>
@@ -248,7 +248,7 @@
                                         <rect key="frame" x="0.0" y="50" width="382" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xow-3c-N2z">
                                         <rect key="frame" x="0.0" y="100" width="382" height="30"/>
@@ -347,7 +347,7 @@
                                         <rect key="frame" x="0.0" y="100" width="382" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE6-f2-SXe">
                                         <rect key="frame" x="0.0" y="150" width="382" height="30"/>
@@ -699,7 +699,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-5n-JRg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-5n-JRg">
                                             <rect key="frame" x="13" y="15" width="104" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -741,7 +741,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Events" id="vPj-Mx-zdl">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="fRm-1r-eZe">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="fRm-1r-eZe">
                             <connections>
                                 <segue destination="OAC-lC-vXj" kind="unwind" unwindAction="unwingSegue:" id="4TS-8H-Xe1"/>
                             </connections>
@@ -807,7 +807,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qxc-xA-cH0">
-                                <rect key="frame" x="16" y="80" width="382" height="162"/>
+                                <rect key="frame" x="0.0" y="80" width="0.0" height="162"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T4j-Mq-yjW">
                                         <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="40.666666666666664"/>
@@ -878,10 +878,10 @@
                                 </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="97x-qk-nQl">
-                                <rect key="frame" x="16" y="252" width="382" height="162"/>
+                                <rect key="frame" x="0.0" y="252" width="0.0" height="162"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hbX-H1-o3T">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="40.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM0-Ot-SWE">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="20.333333333333332"/>
@@ -898,7 +898,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-Pl-MzJ">
-                                        <rect key="frame" x="0.0" y="60.666666666666686" width="382" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="60.666666666666686" width="0.0" height="40.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuZ-Tv-XJh">
                                                 <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="20.333333333333332"/>
@@ -915,7 +915,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7CR-QI-33p">
-                                        <rect key="frame" x="0.0" y="121.33333333333333" width="382" height="40.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="121.33333333333333" width="0.0" height="40.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-em-Tih">
                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="20.333333333333332"/>
@@ -934,7 +934,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvB-sb-O9E">
-                                <rect key="frame" x="16" y="690" width="382" height="30"/>
+                                <rect key="frame" x="0.0" y="690" width="0.0" height="30"/>
                                 <color key="backgroundColor" red="0.81344687940000004" green="0.72717815640000005" blue="0.48914068939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add to My Calendar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1030,7 +1030,7 @@
         <image name="upload" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Bv-4f-Zoz"/>
+        <segue reference="4bR-nv-D9g"/>
         <segue reference="GhS-kE-U56"/>
         <segue reference="siy-aq-PUK"/>
         <segue reference="R86-yG-VDo"/>

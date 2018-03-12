@@ -15,7 +15,7 @@ class DatabaseService
     static let shared = DatabaseService()
     private init() {}
     
-    let eventsReference = Database.database().reference().child("events")
+    let eventsReference = Database.database().reference().child("production").child("events")
     let storageReference = Storage.storage().reference()
     
     

@@ -151,7 +151,7 @@ class VehiclesTableViewController: UITableViewController {
         
         cell.textLabel?.text = v.make + " " + v.model + " " + v.year
         
-        cell.detailTextLabel?.text = String(v.price)
+        cell.detailTextLabel?.text = String(format: "$%.02f", v.price)
         
         //cell.accessoryType = .disclosureIndicator
         return cell

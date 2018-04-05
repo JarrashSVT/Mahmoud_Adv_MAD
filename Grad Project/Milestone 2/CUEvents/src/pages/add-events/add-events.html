@@ -1,0 +1,134 @@
+<!--
+  Generated template for the AddEventsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header mode="md">
+  <ion-navbar mode="md">
+    <ion-title style="text-align:center" mode="md">
+     New Event
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="adv-content">
+  <form [formGroup]="postForm">
+    <ion-item>
+      <ion-label class="input-title" stacked>Event Title </ion-label>
+      <ion-label color="danger" class="input-error" stacked
+      *ngIf="!postForm.controls.title.valid && postForm.controls.title.dirty">
+        <ion-icon name="ios-alert"></ion-icon>
+        Please enter a title
+      </ion-label>
+      <ion-input formControlName="title" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="input-title" stacked>Event Description</ion-label>
+      <ion-label color="danger" class="input-error" stacked
+      *ngIf="!postForm.controls.desc.valid && postForm.controls.desc.dirty">
+        <ion-icon name="ios-alert"></ion-icon>
+        الرجاء ادخال الوصف
+      </ion-label>
+      <ion-textarea rows="4" placeholder="" formControlName="desc" (keyup)="grow($event)" (keydown)="grow($event)" type="text"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="input-title" stacked>Address</ion-label>
+      <ion-input formControlName="address" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+      <ion-label class="input-title" stacked>Event Timing</ion-label>
+      
+    <ion-row item-content style="width: 100%;">
+      <ion-col>
+        <ion-label text-center no-padding no-margin stacked>Date</ion-label>
+        <ion-item>
+          <ion-note item-start>From</ion-note>
+          <ion-datetime [min]="mindate" [max]="maxdate" cancelText="Cancel" doneText="Done" displayFormat="DD/MM/YYYY" formControlName="startdate"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-note item-start>To</ion-note>
+          <ion-datetime [min]="mindate" [max]="maxdate" cancelText="Cancel" doneText="Done" displayFormat="DD/MM/YYYY" formControlName="enddate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-label text-center no-padding no-margin stacked>Time</ion-label>
+        <ion-item>
+          <ion-note item-start>From</ion-note>
+          <ion-datetime cancelText="Cancel" doneText="Done" displayFormat="hh:mm a" formControlName="starttime"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-note item-start>To</ion-note>
+          <ion-datetime cancelText="Cancel" doneText="Done" displayFormat="hh:mm a" formControlName="endtime"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+    <ion-item no-lines>
+      <ion-label class="input-title" stacked>Registration</ion-label>
+      <ion-label color="danger" class="input-error" stacked
+      *ngIf="!postForm.controls.title.valid && postForm.controls.title.dirty">
+        <ion-icon name="ios-alert"></ion-icon>
+        Please select the Registration requirement
+      </ion-label>
+    </ion-item>
+    <div padding-horizontal>
+      <ion-segment padding-horizontal mode="ios" formControlName="publicorreg" dir="ltr">
+        <ion-segment-button value="Required">
+          Required
+        </ion-segment-button>
+        <ion-segment-button value="Not Required">
+          Not Required
+        </ion-segment-button>
+      </ion-segment>
+
+
+</div>
+      
+      <ion-item no-lines>
+        <ion-label class="input-title" stacked>Event Specs</ion-label>
+      <ion-row item-content style="width: 100%;">
+        <ion-col>
+          <ion-item text-center no-padding>
+            <ion-label no-margin no-padding stacked text-center>Event Category</ion-label>
+            <ion-select no-padding cancelText="Cancel" okText="OK" formControlName="catid">
+              <ion-option no-padding *ngFor="let cat of categories | async" [value]="cat.cat_name">{{cat.cat_name}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item text-center no-padding>
+            <ion-label text-center no-padding no-margin stacked>Tergeted Audience</ion-label>
+            <ion-select no-padding cancelText="Cancel" okText="OK" formControlName="targetid">
+              <ion-option no-padding *ngFor="let target of audience | async" [value]="target.name">{{target.name}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item text-center no-padding>
+            <ion-label text-center no-padding no-margin stacked>City</ion-label>
+            <ion-select no-padding cancelText="Cancel" okText="OK"  formControlName="cityid">
+              <ion-option no-padding *ngFor="let city of cities | async" [value]="city.name">{{city.name}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+</ion-item>
+
+
+
+ 
+  
+
+
+
+  </form>
+
+  <button color="twitter"  mode="md" ion-button full (click)="submit()">
+    Add Event 
+  </button>
+</ion-content>

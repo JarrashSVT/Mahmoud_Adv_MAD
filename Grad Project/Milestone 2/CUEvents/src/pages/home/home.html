@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      CU Events
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-row>
+    <ion-col col-9>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="newEvent" placeholder="New Event"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <button ion-button (click)="addEvent()">Add!</button>
+    </ion-col>
+  </ion-row>
+ 
+  <ion-list>
+    <ion-item-sliding *ngFor="let event of events | async">
+      <ion-item>
+        {{ event.title }}
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" icon-only (click)="removeItem(item.$key)"><ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let cat of categories | async">
+      <ion-item>
+        {{ cat.cat_name }}
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

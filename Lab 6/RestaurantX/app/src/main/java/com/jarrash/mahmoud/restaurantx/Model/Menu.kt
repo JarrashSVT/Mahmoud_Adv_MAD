@@ -32,7 +32,8 @@ class Menu
     {
         var menu = ArrayList<Menu>()
         val breakfastItems = arrayListOf<MenuItem>(
-                MenuItem("Eggs", R.drawable.friedeggs,3.99,"American"),
+                MenuItem("Fried Eggs", R.drawable.friedeggs,3.99,"International"),
+                MenuItem("Eggs Benedict", R.drawable.benedict,9.99,"American"),
                 MenuItem("Pancakes", R.drawable.pancakes,4.49, "American"),
                 MenuItem("Falafel", R.drawable.falafel, 5.59, "Middle Eastern"),
                 MenuItem("Hummus", R.drawable.hummus, 4.99, "Middle Eastern")

@@ -1,0 +1,35 @@
+ <ion-list>
+    <ion-item-sliding *ngFor="let event of events | async">
+      <ion-item [navPush]="eventDetails">
+          <ion-card>
+              <ion-card-header>
+                {{ event.title }}
+              </ion-card-header>
+              <ion-card-content>
+               Starts at {{event.startdate}}
+              </ion-card-content>
+
+              <ion-row no-padding>
+                  <ion-col>
+                    <button ion-button clear  small icon-start>
+                      {{event.cat}}
+                    </button>
+                  </ion-col>
+                  <ion-col>
+                    <button ion-button clear small icon-start>
+                      {{event.city}}
+                    </button>
+                  </ion-col>
+                  <ion-col>
+                    <button ion-button clear small icon-start>
+                      {{event.target}}
+                    </button>
+                  </ion-col>
+                </ion-row>
+
+
+
+            </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>

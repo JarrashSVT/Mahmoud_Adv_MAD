@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1092582002587",
+    "firebase_url": "https://cueventsfirebase-v1.firebaseio.com",
+    "project_id": "cueventsfirebase-v1",
+    "storage_bucket": "cueventsfirebase-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092582002587:android:390b8a81ec7634fd",
+        "android_client_info": {
+          "package_name": "com.jarrash.mahmoud.cuevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092582002587-lcjtk4ugl2jkllftfeprdnhcrjl36tv3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jarrash.mahmoud.cuevents",
+            "certificate_hash": "ecc406c4a8f7247a73a61d22204e5fd50688c36e"
+          }
+        },
+        {
+          "client_id": "1092582002587-b99ka6f7djls0v34fqbujfknuh7q96vb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_D-h68w10Jp2R0QC6QVWikuXzevY6vjQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092582002587-b99ka6f7djls0v34fqbujfknuh7q96vb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1092582002587-ikfff7uf23o012k24crpihbh0r72bof0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jarrash.CU-Events-v1-0"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

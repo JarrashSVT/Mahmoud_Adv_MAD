@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jarrash.mahmoud.cuevents.AddEventActivity">
+
+<Button
+    android:id="@+id/signOutBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Sign Out"
+    android:visibility="gone"/>
+
+
+    <EditText
+        android:id="@+id/eventTitleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/event_title_txt"/>
+
+
+    <EditText
+        android:id="@+id/descTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description_txt"/>
+
+    <EditText
+        android:id="@+id/campusTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/campus_txt"/>
+
+    <EditText
+        android:id="@+id/addressTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address_txt"/>
+
+    <EditText
+        android:id="@+id/startDateTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/start_date_txt"
+        android:editable="false" />
+
+    <EditText
+        android:id="@+id/endDateTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/end_dateTxt"
+        android:editable="false" />
+
+    <Button
+        android:id="@+id/addEventBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Event" />
+
+
+
+
+</LinearLayout>

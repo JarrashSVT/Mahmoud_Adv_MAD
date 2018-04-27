@@ -6,63 +6,79 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.jarrash.mahmoud.cuevents.AddEventActivity">
-
-<Button
-    android:id="@+id/signOutBtn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Sign Out"
-    android:visibility="gone"/>
-
-
-    <EditText
-        android:id="@+id/eventTitleTxt"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/event_title_txt"/>
+        android:theme="@style/AppTheme.AppBarOverlay">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <EditText
-        android:id="@+id/descTxt"
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/description_txt"/>
-
-    <EditText
-        android:id="@+id/campusTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/campus_txt"/>
-
-    <EditText
-        android:id="@+id/addressTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/address_txt"/>
-
-    <EditText
-        android:id="@+id/startDateTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/start_date_txt"
-        android:editable="false" />
-
-    <EditText
-        android:id="@+id/endDateTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/end_dateTxt"
-        android:editable="false" />
-
-    <Button
-        android:id="@+id/addEventBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Event" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
+            <EditText
+                android:id="@+id/eventTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_title_txt"/>
 
+
+            <EditText
+                android:id="@+id/descTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description_txt"/>
+
+            <EditText
+                android:id="@+id/campusTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/campus_txt"/>
+
+            <EditText
+                android:id="@+id/addressTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address_txt"/>
+
+            <EditText
+                android:id="@+id/startDateTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/start_date_txt"
+                android:editable="false" />
+
+            <EditText
+                android:id="@+id/endDateTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/end_dateTxt"
+                android:editable="false" />
+
+            <Button
+                android:id="@+id/addEventBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Event" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
+import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -83,9 +84,16 @@ class MainActivity : AppCompatActivity() {
             Log.i("Position", position.toString())
             val event =  parent.getItemAtPosition(position) as Event
 
-//            val intent = Intent(this@MainActivity, MenuDetailsActivity::class.java)
-//            intent.putExtra("SECTION", menu.section)
-//            startActivity(intent)
+            val intent = Intent(this@MainActivity, EventDetailsActivity::class.java)
+
+            intent.putExtra("TITLE", event.title)
+            intent.putExtra("DESC", event.description)
+            intent.putExtra("ADDRESS", event.address)
+            intent.putExtra("CAMPUS", event.campus)
+            intent.putExtra("STARTDATE", event.startDate)
+            intent.putExtra("ENDDATE", event.endDate)
+
+            startActivity(intent)
         }
 
 
@@ -102,7 +110,12 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                FirebaseService.signOut()
+                Toast.makeText(this,"Logged Off", Toast.LENGTH_SHORT).show()
+
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

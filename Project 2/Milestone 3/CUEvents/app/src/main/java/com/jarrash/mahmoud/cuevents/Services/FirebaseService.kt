@@ -19,7 +19,7 @@ object FirebaseService
     init {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        eventsRef = database?.getReference("kotlin")?.child("events")
+        eventsRef = database?.getReference("production")?.child("events")
     }
 
     fun getLoggedInUser() : FirebaseUser?

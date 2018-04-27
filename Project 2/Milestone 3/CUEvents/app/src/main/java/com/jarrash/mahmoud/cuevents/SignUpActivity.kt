@@ -23,7 +23,7 @@ class SignUpActivity : Activity() {
 
         val toolbar = findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar)
         toolbar.title = resources.getString(R.string.app_name)
-        toolbar.inflateMenu(R.menu.menu_main)
+//        toolbar.inflateMenu(R.menu.menu_main)
 
         val createUserBtn = findViewById<Button>(R.id.createUserBtn)
         createUserBtn.setOnClickListener{

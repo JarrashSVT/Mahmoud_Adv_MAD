@@ -69,12 +69,28 @@
                 android:ems="10"
                 android:hint="@string/end_dateTxt"
                 android:editable="false" />
+            <Button
+                android:id="@+id/uploadImgBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_image_btn"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/uploadedImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cuboulder600"
+                android:layout_gravity="center_horizontal"/>
 
             <Button
                 android:id="@+id/addEventBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Event" />
+                android:text="@string/add_event_txt"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 

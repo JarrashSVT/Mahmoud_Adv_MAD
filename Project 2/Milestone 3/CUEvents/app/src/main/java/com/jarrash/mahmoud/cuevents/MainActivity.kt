@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("CAMPUS", event.campus)
             intent.putExtra("STARTDATE", event.startDate)
             intent.putExtra("ENDDATE", event.endDate)
+            intent.putExtra("IMGURL", event.image)
 
             startActivity(intent)
         }

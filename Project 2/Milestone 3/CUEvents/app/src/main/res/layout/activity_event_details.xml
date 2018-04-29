@@ -27,7 +27,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
         <TextView
             android:id="@+id/dTitleTxt"
             android:layout_width="wrap_content"
@@ -36,57 +37,81 @@
             android:layout_marginTop="16dp"
             android:text="@string/event_title_txt"
             android:textSize="24sp"
+            android:textColor="@color/colorAccent"
             />
+
+        <ImageView
+            android:id="@+id/dEventImg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/dDescTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/description_txt"
             android:textSize="18sp"
+            android:background="@drawable/rounded_corner"
             />
 
         <TextView
             android:id="@+id/dCampusTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/campus_txt"
             android:textSize="18sp"
+            android:background="@drawable/rounded_corner"
             />
 
         <TextView
             android:id="@+id/dAddressTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/address_txt"
             android:textSize="18sp"
+            android:background="@drawable/rounded_corner"
             />
 
         <TextView
             android:id="@+id/dStartDateTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/start_date_txt"
             android:textSize="18sp"
+            android:background="@drawable/rounded_corner"
             />
 
         <TextView
             android:id="@+id/dEndDateTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/end_dateTxt"
             android:textSize="18sp"
+            android:background="@drawable/rounded_corner"
             />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_calendar_btn"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </ScrollView>
 

@@ -14,4 +14,7 @@
     <string name="start_date_txt">Start Date</string>
     <string name="end_dateTxt">End Date</string>
     <string name="logout">Logout</string>
+    <string name="add_event_txt">Add Event</string>
+    <string name="upload_image_btn">Upload Image</string>
+    <string name="add_to_calendar_btn">Add To Calendar</string>
 </resources>

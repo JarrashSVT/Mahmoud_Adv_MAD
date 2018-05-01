@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyHomeLab-Firebase</string>
+    <string name="action_settings">Settings</string>
+    <string name="host_name_txt">Host Name</string>
+    <string name="ip_address_txt">IP Address</string>
+    <string name="add_device_btn">Add Device</string>
+    <string name="update_device_btn">Update Device</string>
+    <string name="os_txt">OS</string>
+    <string-array name="osList">
+        <item>Windows</item>
+        <item>macOS</item>
+        <item>Linux</item>
+    </string-array>
+</resources>

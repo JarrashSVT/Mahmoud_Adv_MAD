@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "116226750881",
+    "firebase_url": "https://jarrashsvt-firebase-db.firebaseio.com",
+    "project_id": "jarrashsvt-firebase-db",
+    "storage_bucket": "jarrashsvt-firebase-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116226750881:android:2ad78bc9603f013f",
+        "android_client_info": {
+          "package_name": "com.jarrash.mahmoud.myhomelab_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116226750881-pks191ahogv6doh5sjki2v1481k84pg9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jarrash.mahmoud.myhomelab_firebase",
+            "certificate_hash": "ecc406c4a8f7247a73a61d22204e5fd50688c36e"
+          }
+        },
+        {
+          "client_id": "116226750881-ndprv9akc41f903rn2c6gi33a337fdsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5sRD1oqBUhwDTZRKSRXeRjOyEkEmxC1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116226750881-ndprv9akc41f903rn2c6gi33a337fdsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

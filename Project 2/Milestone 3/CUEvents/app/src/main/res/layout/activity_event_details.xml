@@ -107,6 +107,7 @@
             />
 
         <Button
+            android:id="@+id/addToCalendarBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_to_calendar_btn"

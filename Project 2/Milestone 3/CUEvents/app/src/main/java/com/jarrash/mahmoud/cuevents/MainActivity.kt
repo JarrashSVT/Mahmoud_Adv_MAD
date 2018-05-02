@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.ListView
 import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
@@ -16,7 +17,7 @@ import com.jarrash.mahmoud.cuevents.Adapters.EventAdapter
 import com.jarrash.mahmoud.cuevents.Model.Event
 import com.jarrash.mahmoud.cuevents.Services.FirebaseService
 import kotlinx.android.synthetic.main.activity_main.*
-
+import kotlinx.android.synthetic.main.content_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        progressBar1.visibility = View.VISIBLE
 
         Log.i("MainActivity@onCreate","App Started ....")
 
@@ -55,6 +58,8 @@ class MainActivity : AppCompatActivity() {
                         Log.i("", event?.title)
                         events.add(event!!)
                     }
+
+                    progressBar1.visibility = View.GONE
                     eventList.adapter = EventAdapter(this@MainActivity, events)
                 }
             }

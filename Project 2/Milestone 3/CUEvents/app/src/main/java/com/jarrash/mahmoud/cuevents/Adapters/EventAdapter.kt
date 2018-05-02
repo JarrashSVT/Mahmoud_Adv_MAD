@@ -28,6 +28,7 @@ class EventAdapter(private var activity: Activity, private var events: MutableLi
             this.eventTitleTxt = row?.findViewById<TextView>(R.id.titleTxt_row)
             this.campusTxt = row?.findViewById(R.id.campusTxt_row)
             this.eventImg = row?.findViewById<ImageView>(R.id.eventImg_row)
+            this.eventImg?.setImageResource(android.R.color.transparent)
         }
     }
 
@@ -54,7 +55,7 @@ class EventAdapter(private var activity: Activity, private var events: MutableLi
 
         viewHolder.eventTitleTxt?.text = event.title
         viewHolder.campusTxt?.text = event.campus
-
+        viewHolder.eventImg!!.setImageResource(android.R.color.transparent)
         val imgUrl = event.image
         DownloadImageTask(viewHolder.eventImg!!).execute(imgUrl)
 //        viewHolder.eventImg?.setImageURI(Uri.parse(event.image))

@@ -100,10 +100,10 @@ class ActivitiesActivity : AppCompatActivity() {
         {
             //val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
 
-            val restToRemove = myActivities[info.position]
-            Log.i("deviceToRemove", restToRemove.id)
+            val deviceToRemove = myActivities[info.position]
+            Log.i("deviceToRemove", deviceToRemove.id)
 
-            FirebaseService.activitiesRef?.child(restToRemove.id)?.removeValue()
+            FirebaseService.activitiesRef?.child(deviceToRemove.id)?.removeValue()
             myActivities.removeAt(info.position)
 
         }

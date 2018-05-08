@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      CU Events
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <ion-toolbar no-border-top>
+        <ion-row>
+          <ion-col col-4>
+            <ion-item no-padding class="filter">
+              <ion-label  stacked text-center>Category</ion-label>
+              <ion-select cancelText="Cancel" okText="OK" text-center [(ngModel)]="catid">
+                <ion-option text-center [value]="All" selected="true">All</ion-option>
+                <ion-option text-center *ngFor="let cat of categories | async" [value]="cat.cat_name">{{cat.cat_name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item no-padding class="filter">
+              <ion-label stacked text-center>Audience</ion-label>
+              <ion-select cancelText="Cancel" okText="OK" text-center [(ngModel)]="targetid">
+                <ion-option text-center [value]="All" selected="true">All</ion-option>
+                <ion-option text-center *ngFor="let target of audience | async" [value]="target.name">{{target.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item no-padding class="filter">
+              <ion-label stacked text-center>City</ion-label>
+              <ion-select cancelText="Cancel" okText="OK" text-center [(ngModel)]="townid">
+                <ion-option text-center [value]="All" selected="true">All</ion-option>
+                <ion-option text-center *ngFor="let city of cities | async"  [value]="city.name">{{city.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+ 
+      <ion-grid>
+          <ion-row *ngFor="let event of events | async ">
+            <ion-col>
+              <!--ion-item  text-wrap  *ngIf="!(catid !== 'All' && event.catid !== catid) && !(targetid !== 'All' && event.targetid !== targetid) && !(townid !== 'All' && event.cityid !== townid)" [navPush]="eventDetailsPage" [navParams]="{event: event}"-->
+
+              <ion-item  text-wrap *ngIf="!(catid !== 'All' && event.catid !== catid) && !(targetid !== 'All' && event.targetid !== targetid) && !(townid !== 'All' && event.cityid !== townid)"  [navPush]="eventDetailsPage" [navParams]="{event: event}">
+                <h2> {{event?.title}} </h2>
+                <span style="color: #666;font-size: 14px">Starts at &nbsp;{{event?.startdate}}</span>
+                  <ion-buttons style="margin-bottom: 2px">
+                    
+                    <button ion-button small outline round color="active">{{event?.catid}}</button>
+                    <button ion-button small outline round color="active">{{event?.targetid}}</button>
+                    <button ion-button small outline round color="active">{{event?.cityid}}</button>
+                  </ion-buttons>
+      
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+</ion-content>

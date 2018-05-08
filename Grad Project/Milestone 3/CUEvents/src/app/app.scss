@@ -1,0 +1,93 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+:root{
+    --dark: #3E3E3E;
+    --light: #CFB97D;
+    --text: #CFB97D;
+    --border: #3E3E3E;
+}
+
+
+ion-title{
+    text-align: center !important;
+}
+
+.adv-content{
+    .scroll-content, .fixed-content {
+    }
+}
+
+.alert-head, .alert-radio-label{
+    text-align: center!important;
+}
+
+.tabs-md .tabbar{
+    background-color: var(--dark);
+}
+ion-header{
+    .toolbar-background-md, .toolbar-background-ios{
+        background-image: url('../assets/imgs/toppart-cu.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.toolbar-title-md{
+    color: white;
+    //font-weight: bold;
+}
+.tabs-md .tab-button[aria-selected=true]{
+    background-color: var(--light); 
+}
+
+.back-button{
+    color: white !important;
+}
+
+ion-card{
+    border-radius: 5px !important;
+    background-color: #EFEFEF !important;
+}
+
+ion-toast{
+    text-align: center !important;
+    margin-left: 25% !important;
+    width: 50% !important;
+    font-family: 'customfont' !important;
+  }
+
+  .action-sheet-container{
+
+    .action-sheet-group{
+        direction: rtl !important;
+    }
+    .action-sheet-title{
+        color: var(--text) !important;
+
+    }
+    .action-sheet-group-cancel{
+        *{
+            color: #488aff !important;
+        }
+    }
+  }
+
+  .loading-content{
+      direction: rtl !important;
+  }
